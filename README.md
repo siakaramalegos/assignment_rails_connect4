@@ -7,6 +7,7 @@ by [Sia Karamalegos](https://github.com/siakaramalegos)
 
 This project started as a command-line Ruby games project with Connect Four as well as other games.  It is now a Rails application containing these games:
 
+* Rock-Paper-Scissors-Lizard-Spock
 * Connect Four
 * Minesweeper (coming soon!)
 * Mastermind (coming soon!)
