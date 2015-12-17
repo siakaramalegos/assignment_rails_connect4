@@ -1,0 +1,40 @@
+<br>
+<div class="row text-center">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="well">
+      <h1 class="text-muted">Rock-Paper-Scissors-Lizard-Spock</h1>
+
+      <%= form_tag(rockpaperscissors_result_path, :method => "get") do %>
+        <div class="form-group">
+          <%= label_tag 'Choose wisely...' %><br>
+          <div class="btn-group" data-toggle="buttons">
+            <%= label_tag :choice, class: "btn btn-primary" do %>
+              <%= radio_button_tag :choice, 'rock' %>
+              <%= fa_icon('hand-rock-o', text: 'Rock') %>
+            <% end %>
+            <%= label_tag :choice, class: "btn btn-primary" do %>
+              <%= radio_button_tag :choice, 'paper' %>
+              <%= fa_icon('hand-paper-o', text: 'Paper') %>
+            <% end %>
+            <%= label_tag :choice, class: "btn btn-primary" do %>
+              <%= radio_button_tag :choice, 'scissors' %>
+              <%= fa_icon('hand-scissors-o', text: 'Scissors') %>
+            <% end %>
+            <%= label_tag :choice, class: "btn btn-primary" do %>
+              <%= radio_button_tag :choice, 'lizard' %>
+              <%= fa_icon('hand-lizard-o', text: 'Lizard') %>
+            <% end %>
+            <%= label_tag :choice, class: "btn btn-primary" do %>
+              <%= radio_button_tag :choice, 'spock' %>
+              <%= fa_icon('hand-spock-o', text: 'Spock') %>
+            <% end %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= submit_tag 'Did I Win?', class: 'btn btn-default btn-lg' %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

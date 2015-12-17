@@ -1,0 +1,33 @@
+<br>
+<div class="row text-center">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="well">
+      <h1 class="text-muted">Rock-Paper-Scissors-Lizard-Spock</h1>
+
+      <div class="panel panel-success <%= 'panel-danger' if @result.include?('lose') %>">
+        <div class="panel-heading">
+          <%= @result %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>Your Choice</h3>
+          <%= fa_icon("hand-#{@choice}-o", text: @choice.capitalize, class: "fa-3x") %>
+        </div>
+
+        <div class="col-sm-6">
+          <h3>Computer's Choice</h3>
+          <%= fa_icon("hand-#{@computer_choice}-o", text: @computer_choice.capitalize, class: "fa-3x") %>
+        </div>
+      </div>
+      <br>
+      <br>
+      <p>
+        <%= link_to 'Play Again!', rockpaperscissors_path, class: 'btn btn-primary btn-lg' %>
+      </p>
+    </div>
+  </div>
+</div>
+
+

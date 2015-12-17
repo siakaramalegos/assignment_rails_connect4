@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'rockpaperscissors' => 'rockpaperscissors#new'
+  get 'rockpaperscissors/new'
+  get 'rockpaperscissors/result'
+
   root 'pages#home'
 
   get 'gamecenter' => 'pages#home'
