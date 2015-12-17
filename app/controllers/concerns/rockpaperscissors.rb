@@ -35,8 +35,10 @@ module Rockpaperscissors
 
   def which_winner(human, computer)
     if WINS.any? { |win| win[:pair] == [human, computer] }
+      session[:rps_human_score] += 1
       1
     else
+      session[:rps_cpu_score] += 1
       2
     end
   end

@@ -13,13 +13,19 @@
       <div class="row">
         <div class="col-sm-6">
           <h3>Your Choice</h3>
-          <%= fa_icon("hand-#{@choice}-o", text: @choice.capitalize, class: "fa-3x") %>
+          <p><%= fa_icon("hand-#{@choice}-o", text: @choice.capitalize, class: "fa-3x") %></p>
+          <p class="text-muted">
+            <strong>Session Score: </strong> <%= session[:rps_human_score] %>
+          </p>
         </div>
 
         <div class="col-sm-6">
           <h3>Computer's Choice</h3>
-          <%= fa_icon("hand-#{@computer_choice}-o", text: @computer_choice.capitalize, class: "fa-3x") %>
-        </div>
+          <p><%= fa_icon("hand-#{@computer_choice}-o", text: @computer_choice.capitalize, class: "fa-3x") %></p>
+          <p class="text-muted">
+            <strong>Session Score: </strong> <%= session[:rps_cpu_score] %>
+          </p>
+          </div>
       </div>
       <br>
       <br>
